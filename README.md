@@ -1,7 +1,7 @@
 
 # Software to Secure files using CBC Encryption
 
-This security Software application is used to Encrypt/Decrypt a file by allowing the user to chose a secret, cipher type(AES / DES), hashing algorithm(SHA256 / SHA512) and the number of iterations of cryptographic function based on the level of security needed and the hardware support. The software also allows to profile latency for different combinations of security parameters.
+This Security Software Application is used to Encrypt/Decrypt a file by allowing the user to chose a secret, cipher type(AES / DES), hashing algorithm(SHA256 / SHA512) and the number of iterations of cryptographic function based on the level of security needed and the hardware support. The software also allows to profile latency for different combinations of security parameters.
 
 
 ## How it Works - Steps involved in CBC Encryption
