@@ -1,0 +1,11 @@
+
+AES_BLOCK = 16
+DES_BLOCK = 8
+
+SALT_SIZE = 16
+
+PBKDF2 = "pbkdf2"
+HEADER_SEPERATOR = b"***"
+HEADER_DELIMITER = b"~"
+FILE_EXTENSION = ".enc"
+FILE_PREFIX = "decrypted_"
