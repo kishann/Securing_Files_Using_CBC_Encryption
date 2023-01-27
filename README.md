@@ -1,27 +1,27 @@
 
 # Software to Secure files using CBC Encryption
 
-This Security Software Application is used to Encrypt/Decrypt a file by allowing the user to chose a secret, cipher type(AES / DES), hashing algorithm(SHA256 / SHA512) and the number of iterations of cryptographic function based on the level of security needed and the hardware support. The software also allows to profile latency for different combinations of security parameters.
+This security software application is used to encrypt/decrypt a file by allowing the user to choose a secret, cipher type (AES/DES), hashing algorithm (SHA256/SHA512), and the number of iterations of cryptographic function based on the level of security needed and the hardware support. The software also allows for profiling latency for different combinations of security parameters.
 
 
 ## How it Works - Steps involved in CBC Encryption
 - The encryption uses the [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) library to derive a master key using a secret, cipher, hashing algorithms and salt. The cipher can be one of AES128, AES256, or 2DES, and the hashing algorithm can be one of SHA256 or SHA512. 
-- The master key is then used to generate an encryption key and a HMAC key. The generated cipher file is then combined wth an initialization vector(IV) for creation of an HMAC. The HMAC created and the encryption information is packed inside the header metadata.
-- For the decryption, the header is extracted and unwrapped to gather information about encoding. The master key, encryption key and the HMAC key are generated using the PBDKDF2 library. The extracted HMAC is then validated followed by retrieval of the original file.
+- The master key is then used to generate an encryption key and an HMAC key. The generated cipher file is then combined with an initialization vector (IV) to create an HMAC. The created HMAC and the encryption information are packed inside the header metadata.
+- For decryption, the header is extracted and unwrapped to gather information about encoding. The master key, encryption key, and the HMAC key are generated using the PBKDF2 library. The extracted HMAC is then validated, followed by the retrieval of the original file.
 
 ## Encryption and decryption Sequence
-- Run the Secure file Suite implementation file(secure_file_impl.py)
-- Select a file to be encrypted by clicking on "Input a file"
-- Enter password(refer to [this](https://security.harvard.edu/use-strong-passwords) to choose a good password)
-- Select Cipher type from dropdown
-- Select Hashing algorithm from dropdown
-- Enter the number of iterations
-- Click the "Encrypt" button
-- The number of iterations and corresponding latency in seconds is captured
-- A decryption window is opens
-- Select a file to be decrypted by clicking on "Input a file"(file with .enc extension)
-- Click the "Decrypt" button
-- A decrypted_file is created on the same directory
+- Run the Secure file Suite implementation file(secure_file_impl.py).
+- Select a file to be encrypted by clicking on "Input a file".
+- Enter a password(refer to [this](https://security.harvard.edu/use-strong-passwords) to choose a good password)
+- Select a Cipher type from the drop-down.
+- Select a Hashing algorithm from the drop-down.
+- Enter the number of iterations.
+- Click the "Encrypt" button.
+- The number of iterations and the corresponding latency in seconds are captured.
+- A decryption window will open.
+- Select a file to be decrypted by clicking on "Input a file" (file with .enc extension).
+- Click the "Decrypt" button.
+- A decrypted_file will be created in the same directory.
 
 ## Performance Analysis
 
